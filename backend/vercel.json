@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "backend/*.js": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
