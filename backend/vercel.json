@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "./index.js",
-      "use": "@vervel/node"
+  "functions": {
+    "backend/*.js": {
+      "runtime": "@vercel/node"
     }
-  ],
+  },
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/backend/index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/backend/index.js"
     }
   ]
 }
