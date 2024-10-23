@@ -1,18 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "backend/*.js": {
-      "runtime": "nodejs18.x"
+  "builds": [
+    {
+      "src": "api/weather.js",
+      "use": "@vercel/node"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/backend/index.js"
+      "dest": "api/weather.js"
     }
   ]
 }
