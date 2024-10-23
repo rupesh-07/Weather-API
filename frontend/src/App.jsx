@@ -14,7 +14,7 @@ function App() {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/weather?city=${city}`
+        `http://localhost:5000/api/weather?city=${city}`
       );
 
       // console.log(response.data);
