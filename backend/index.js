@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.send("Home Page Backend");
 });
 
-app.get("/weather", async (req, res) => {
+app.get("/api/weather", async (req, res) => {
   const city = req.query.city;
   const apiKey = process.env.OPENWEATHER_API_KEY;
 
