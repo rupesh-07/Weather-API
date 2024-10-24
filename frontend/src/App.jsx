@@ -15,7 +15,7 @@ function App() {
     try {
       const response = await axios.get(
         // `http://localhost:5000/api/weather?city=${city}`
-        `https://weather-api-z0q9.onrender.com/api/weather?city=${city}`
+        `https://weather-api-backend-zbcc.onrender.com/api/weather?city=${city}`
       );
 
       // console.log(response.data);
